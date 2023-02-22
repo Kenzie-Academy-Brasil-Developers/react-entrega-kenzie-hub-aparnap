@@ -14,7 +14,7 @@ export const UserProvider = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem("@TOKEN");
-    console.log(token);
+
     if (token) {
       const userAutoLogin = async () => {
         try {
@@ -26,7 +26,6 @@ export const UserProvider = ({ children }) => {
           setUser(response.data);
           setTechData(response.data.techs);
           navigate("/dashboard");
-          console.log(response.data);
         } catch (error) {
           console.log(error);
         }
@@ -38,7 +37,7 @@ export const UserProvider = ({ children }) => {
   const userRegister = async (data) => {
     try {
       const response = await api.post(`/users`, data);
-      console.log(response);
+
       toast.success("Conta criada com sucesso!", { autoClose: 2000 });
       navigate("/");
     } catch (error) {

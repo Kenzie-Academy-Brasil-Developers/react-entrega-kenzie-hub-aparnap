@@ -13,12 +13,8 @@ const schema = yup
   .required();
 
 export function UpdateModal() {
-  const { techUpdate, setTechUpdateModal, techDelete } =
+  const { techUpdate, techDelete, editingStatus, setEditingStatus } =
     useContext(TechContext);
-
-  const { techData } = useContext(UserContext);
-
-  console.log(techData);
 
   const {
     register,
@@ -26,10 +22,15 @@ export function UpdateModal() {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
+    defaultValues: {
+      title: editingStatus.title,
+      status: editingStatus.status,
+    },
   });
 
-  const submit = (data) => {
-    techUpdate(data, techData[0].id);
+  const submit = async (data) => {
+    await techUpdate(data, editingStatus.id);
+    setEditingStatus(null);
   };
 
   return (
@@ -37,10 +38,7 @@ export function UpdateModal() {
       <form onSubmit={handleSubmit(submit)}>
         <div className="techInfo">
           <h2 className="techInfoTitle">Tecnologia Detalhes</h2>
-          <button
-            className="closeBttn"
-            onClick={() => setTechUpdateModal(false)}
-          >
+          <button className="closeBttn" onClick={() => setEditingStatus(null)}>
             X
           </button>
         </div>
@@ -65,7 +63,10 @@ export function UpdateModal() {
             <button
               className="deleteBttn"
               type="button"
-              onClick={() => techDelete(techData[0].id)}
+              onClick={async () => {
+                await techDelete(editingStatus.id);
+                setEditingStatus(null);
+              }}
             >
               Excluir
             </button>

@@ -6,9 +6,10 @@ export const StyledUpdateTechDiv = styled.div`
   background-color: var(--color-grey-3);
   box-shadow: 0px 3.19783px 31.9783px -7.99458px rgba(0, 0, 0, 0.25);
   border-radius: 3.19783px;
-  position: absolute;
-  top: 150px;
-  left: 13px;
+  position: fixed;
+  top: 52%;
+  left: 41%;
+  transform: translate(-40%, -50%);
 
   form {
     .techInfo {
@@ -16,8 +17,8 @@ export const StyledUpdateTechDiv = styled.div`
       height: 39.97px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 110px;
+      justify-content: space-between;
+      padding: 10px;
       background-color: var(--color-grey-2);
 
       .techInfoTitle {
@@ -117,48 +118,35 @@ export const StyledUpdateTechDiv = styled.div`
 
   @media (min-width: 400px) {
     width: 65%;
-    top: 202px;
-    left: 83px;
-
-    form {
-      .techInfo {
-        gap: 130px;
-      }
-    }
+    top: 60%;
+    left: 50%;
+    transform: translate(-40%, -50%);
   }
 
   @media (min-width: 700px) {
     width: 36%;
-    top: 202px;
-    left: 253px;
-
-    form {
-      .techInfo {
-        gap: 140px;
-      }
-    }
+    top: 60%;
+    left: 50%;
+    transform: translate(-60%, -50%);
   }
 
   @media (min-width: 900px) {
     width: 22%;
-    top: 202px;
-    left: 533px;
+    top: 52%;
+    left: 48%;
+    transform: translate(-40%, -50%);
 
     form {
-      .techInfo {
-        gap: 150px;
-
-        .closeBttn {
-          cursor: pointer;
-        }
+      .closeBttn {
+        cursor: pointer;
       }
-      .buttons {
-        .updateBttn {
-          cursor: pointer;
-        }
-        .deleteBttn {
-          cursor: pointer;
-        }
+    }
+    .buttons {
+      .updateBttn {
+        cursor: pointer;
+      }
+      .deleteBttn {
+        cursor: pointer;
       }
     }
   }

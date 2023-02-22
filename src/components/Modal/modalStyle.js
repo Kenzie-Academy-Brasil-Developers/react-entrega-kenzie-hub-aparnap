@@ -7,18 +7,19 @@ export const StyledModalDiv = styled.div`
   box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
   border-radius: 3.20867px;
   position: absolute;
-  top: 150px;
-  left: 13px;
+  top: 52%;
+  left: 41%;
+  transform: translate(-40%, -50%);
 
   form {
     .techRegister {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 90px;
+      justify-content: space-between;
       background-color: var(--color-grey-2);
       height: 40.11px;
       width: 100%;
+      padding: 10px;
 
       .formTitle {
         font-family: "Inter";
@@ -106,44 +107,31 @@ export const StyledModalDiv = styled.div`
 
   @media (min-width: 400px) {
     width: 65%;
-    top: 202px;
-    left: 83px;
-
-    form {
-      .techRegister {
-        gap: 130px;
-      }
-    }
+    top: 60%;
+    left: 50%;
+    transform: translate(-40%, -50%);
   }
 
   @media (min-width: 700px) {
     width: 36%;
-    top: 202px;
-    left: 253px;
-
-    form {
-      .techRegister {
-        gap: 130px;
-      }
-    }
+    top: 60%;
+    left: 50%;
+    transform: translate(-60%, -50%);
   }
 
   @media (min-width: 900px) {
     width: 22%;
-    top: 202px;
-    left: 533px;
+    top: 52%;
+    left: 48%;
+    transform: translate(-40%, -50%);
 
     form {
-      .techRegister {
-        gap: 150px;
-
-        .closeButton {
-          cursor: pointer;
-        }
-      }
-      .techRegButton {
+      .closeButton {
         cursor: pointer;
       }
+    }
+    .techRegButton {
+      cursor: pointer;
     }
   }
 `;

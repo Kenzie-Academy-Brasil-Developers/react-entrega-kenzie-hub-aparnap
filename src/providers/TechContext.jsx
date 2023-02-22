@@ -20,10 +20,14 @@ export const TechProvider = ({ children }) => {
         },
       });
 
-      setTechData([...techData, response.data.user.techs]);
+      setTechData([...techData, response.data]);
       toast.success("Tecnologia criada com sucesso", { autoClose: 2000 });
     } catch (error) {
       console.log(error);
+      toast.error(
+        "Usuário Já possui esta tecnologia criada, basta atualizá-la",
+        { autoClose: 2000 }
+      );
     }
   };
 

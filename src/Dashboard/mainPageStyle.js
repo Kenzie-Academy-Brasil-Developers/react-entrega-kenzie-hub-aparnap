@@ -11,6 +11,8 @@ export const StyledMainDiv = styled.div`
     height: 131px;
     padding: 10px;
     border-bottom: 1px solid var(--color-grey-3);
+  
+
 
     .userName {
       font-family: "Inter";
@@ -25,15 +27,15 @@ export const StyledMainDiv = styled.div`
       font-weight: 400;
       font-size: var(--font-size-12);
       color: var(--color-grey-1);
-      margin-top: 20px;
+      margin-top: 30px;
     }
   }
 
   .technology {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 130px;
+    justify-content: space-between;
+    padding: 10px;
     margin-top: 20px;
 
     h2 {
@@ -68,14 +70,15 @@ export const StyledMainDiv = styled.div`
       .techList {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 100px;
+        justify-content: space-between;
         width: 100%;
         height: 48.73px;
         background-color: var(--color-grey-4);
         border-radius: var(--border-radius-2);
         margin: 0 auto;
         margin-top: 10px;
+        padding: 10px;
+        cursor: pointer;
 
         .techName {
           font-family: "Inter";
@@ -114,17 +117,11 @@ export const StyledMainDiv = styled.div`
     }
 
     .technology {
-      gap: 260px;
+      justify-content: center;
+      gap: 240px;
     }
-
     .tehDetails {
       width: 40%;
-
-      ul {
-        .techList {
-          gap: 300px;
-        }
-      }
     }
   }
 
@@ -139,16 +136,11 @@ export const StyledMainDiv = styled.div`
 
     .techDetails {
       width: 73%;
-
-      ul {
-        .techList {
-          gap: 400px;
-        }
-      }
     }
 
     .technology {
-      gap: 430px;
+      justify-content: center;
+      gap: 400px;
     }
   }
 
@@ -162,21 +154,11 @@ export const StyledMainDiv = styled.div`
     }
 
     .technology {
-      gap: 530px;
+      gap: 540px;
     }
 
     .techDetails {
       width: 49%;
-
-      ul {
-        .techList {
-          gap: 490px;
-
-          .techName {
-            cursor: pointer;
-          }
-        }
-      }
     }
 
     .technology {

@@ -9,9 +9,7 @@ import { StyledMainDiv } from "./mainPageStyle";
 export function MainPage() {
   const { user, setTechCreateModal, techCreateModal, techData } =
     useContext(UserContext);
-  const { techUpdateModal, setTechUpdateModal } = useContext(TechContext);
-
-  console.log(techData);
+  const { editingStatus, setEditingStatus } = useContext(TechContext);
 
   return (
     <StyledMainDiv>
@@ -37,19 +35,18 @@ export function MainPage() {
             {techData.length > 0 ? (
               <ul>
                 {techData.map((tech) => (
-                  <li className="techList" key={tech.id}>
-                    <h2
-                      className="techName"
-                      onClick={() => setTechUpdateModal(true)}
-                    >
-                      {tech.title}{" "}
-                    </h2>
+                  <li
+                    className="techList"
+                    key={tech.id}
+                    onClick={() => setEditingStatus(tech)}
+                  >
+                    <h2 className="techName">{tech.title} </h2>
                     <p className="techStatus">{tech.status}</p>
                   </li>
                 ))}
-                {techUpdateModal ? <UpdateModal /> : null}
               </ul>
             ) : null}
+            {editingStatus ? <UpdateModal /> : null}
           </div>
         </>
       ) : null}

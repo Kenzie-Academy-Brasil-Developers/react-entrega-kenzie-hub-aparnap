@@ -23,8 +23,9 @@ export function Modal() {
     resolver: yupResolver(schema),
   });
 
-  const submit = (data) => {
-    techCreate(data);
+  const submit = async (data) => {
+    await techCreate(data);
+    setTechCreateModal(false);
   };
 
   return (
