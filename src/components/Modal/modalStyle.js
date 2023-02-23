@@ -7,7 +7,7 @@ export const StyledModalDiv = styled.div`
   box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
   border-radius: 3.20867px;
   position: absolute;
-  top: 52%;
+  top: 55%;
   left: 41%;
   transform: translate(-40%, -50%);
 
@@ -107,21 +107,21 @@ export const StyledModalDiv = styled.div`
 
   @media (min-width: 400px) {
     width: 65%;
-    top: 60%;
+    top: 64%;
     left: 50%;
     transform: translate(-40%, -50%);
   }
 
   @media (min-width: 700px) {
     width: 36%;
-    top: 60%;
+    top: 64%;
     left: 50%;
     transform: translate(-60%, -50%);
   }
 
   @media (min-width: 900px) {
     width: 22%;
-    top: 52%;
+    top: 55%;
     left: 48%;
     transform: translate(-40%, -50%);
 

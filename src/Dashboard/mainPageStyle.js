@@ -1,23 +1,38 @@
 import styled from "styled-components";
 
 export const StyledMainDiv = styled.div`
+  .mainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   width: 100%;
   background-color: #000000;
   margin: 0 auto;
   min-height: 100vh;
 
+  .userDivOuter {
+    width: 100%;
+    border-bottom: 1px solid var(--color-grey-3);
+  }
+
   .userDiv {
     width: 100%;
-    height: 131px;
-    padding: 10px;
-    border-bottom: 1px solid var(--color-grey-3);
+    height: 110px;
+    padding: 38px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
 
     .userName {
       font-family: "Inter";
       font-weight: 700;
       font-size: 18px;
       color: var(--color-grey-0);
-      margin-top: 30px;
     }
 
     .userSelect {
@@ -25,7 +40,7 @@ export const StyledMainDiv = styled.div`
       font-weight: 400;
       font-size: var(--font-size-12);
       color: var(--color-grey-1);
-      margin-top: 30px;
+      margin-top: 20px;
     }
   }
 
@@ -55,8 +70,7 @@ export const StyledMainDiv = styled.div`
   }
 
   .techDetails {
-    width: 90%;
-    height: 416.37px;
+    width: 100%;
     background-color: var(--color-grey-3);
     border-radius: var(--border-radius-1);
     margin: 0 auto;
@@ -95,70 +109,13 @@ export const StyledMainDiv = styled.div`
     }
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 450px) {
     .userDiv {
-      display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 460px;
-    }
-  }
-
-  @media (min-width: 400px) {
-    .userDiv {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 200px;
-    }
-
-    .technology {
-      justify-content: center;
-      gap: 240px;
-    }
-    .tehDetails {
-      width: 40%;
-    }
-  }
-
-  @media (min-width: 700px) {
-    .userDiv {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 360px;
-    }
-
-    .techDetails {
-      width: 73%;
-    }
-
-    .technology {
-      justify-content: center;
-      gap: 400px;
     }
   }
 
   @media (min-width: 900px) {
-    .userDiv {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 460px;
-    }
-
-    .technology {
-      gap: 540px;
-    }
-
-    .techDetails {
-      width: 49%;
-    }
-
     .technology {
       .createButton {
         cursor: pointer;
