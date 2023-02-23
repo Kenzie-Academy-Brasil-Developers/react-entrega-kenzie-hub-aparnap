@@ -11,8 +11,6 @@ export const StyledMainDiv = styled.div`
     height: 131px;
     padding: 10px;
     border-bottom: 1px solid var(--color-grey-3);
-  
-
 
     .userName {
       font-family: "Inter";

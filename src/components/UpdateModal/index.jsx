@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { TechContext } from "../../providers/TechContext";
-import { UserContext } from "../../providers/UserContext";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { StyledUpdateTechDiv } from "./updateModalStyle";
