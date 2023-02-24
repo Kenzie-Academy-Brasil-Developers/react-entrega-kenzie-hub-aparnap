@@ -116,6 +116,12 @@ export const StyledMainDiv = styled.div`
   }
 
   @media (min-width: 900px) {
+    .userDiv {
+      .userSelect {
+        margin-top: 0px;
+      }
+    }
+
     .technology {
       .createButton {
         cursor: pointer;
