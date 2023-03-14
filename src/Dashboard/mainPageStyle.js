@@ -21,8 +21,8 @@ export const StyledMainDiv = styled.div`
   .userDiv {
     width: 100%;
     height: 110px;
-    padding: 38px 0;
-
+    padding: 29px 0;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -33,6 +33,7 @@ export const StyledMainDiv = styled.div`
       font-weight: 700;
       font-size: 18px;
       color: var(--color-grey-0);
+      margin-top: 30px;
     }
 
     .userSelect {
@@ -40,7 +41,6 @@ export const StyledMainDiv = styled.div`
       font-weight: 400;
       font-size: var(--font-size-12);
       color: var(--color-grey-1);
-      margin-top: 20px;
     }
   }
 
@@ -112,12 +112,17 @@ export const StyledMainDiv = styled.div`
   @media (min-width: 450px) {
     .userDiv {
       flex-direction: row;
+      align-items: center;
+      .userName {
+        margin-top: 0px;
+      }
     }
   }
 
   @media (min-width: 900px) {
     .userDiv {
-      .userSelect {
+      align-items: center;
+      .userName {
         margin-top: 0px;
       }
     }

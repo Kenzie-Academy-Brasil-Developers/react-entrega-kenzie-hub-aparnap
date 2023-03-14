@@ -11,6 +11,7 @@ export const StyledHeaderContainer = styled.div`
 
     img {
       margin-top: 20px;
+     
     }
 
     a {
